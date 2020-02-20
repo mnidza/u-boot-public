@@ -16,8 +16,7 @@
 		rtc1 = "/rtc@7000e000";
 		serial0 = &uartd;
 		usb0 = "/usb@c5000000";
-		usb1 = "/usb@c5004000";
-		usb2 = "/usb@c5008000";
+		usb1 = "/usb@c5008000";
 		mmc0 = "/sdhci@c8000600";
 		mmc1 = "/sdhci@c8000400";
 	};
@@ -554,18 +553,6 @@
 
 	usb-phy@c5000000 {
 		status = "okay";
-	};
-
-	usb@c5004000 {
-		status = "okay";
-		nvidia,phy-reset-gpio = <&gpio TEGRA_GPIO(V, 1)
-			GPIO_ACTIVE_LOW>;
-	};
-
-	usb-phy@c5004000 {
-		status = "okay";
-		nvidia,phy-reset-gpio = <&gpio TEGRA_GPIO(V, 1)
-			GPIO_ACTIVE_LOW>;
 	};
 
 	usb@c5008000 {
