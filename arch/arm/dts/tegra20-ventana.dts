@@ -37,10 +37,10 @@
 
 				display-timings {
 					timing@0 {
-						/* Seaboard has 1366x768 */
-						clock-frequency = <70600000>;
-						hactive = <1366>;
-						vactive = <768>;
+						/* TF101 has 1280x800 */
+						clock-frequency = <72072000>;
+						hactive = <1280>;
+						vactive = <800>;
 						hback-porch = <58>;
 						hfront-porch = <58>;
 						hsync-len = <58>;
