@@ -45,3 +45,9 @@ CONFIG_DM_VIDEO=y
 # CONFIG_VIDEO_BPP8 is not set
 CONFIG_VIDEO_TEGRA20=y
 CONFIG_CONSOLE_SCROLL_LINES=10
+CONFIG_BOOTCOMMAND="setenv print_error_message echo The first partition of SD card must be FAT-formatted, and contain in its root directory file uEnv.txt which defines environment variable bootcmd_uenv.; if fatload mmc 1:1 ${scriptaddr} uEnv.txt; then env import -t -r ${scriptaddr} ${filesize}; if test -n \"${bootcmd_uenv}\"; then echo Running bootcmd_uenv...; run bootcmd_uenv; else run print_error_message; fi; else run print_error_message; fi;"
+#CONFIG_LOG=y
+#CONFIG_LOG_CONSOLE=y
+#CONFIG_LOGLEVEL=9
+#CONFIG_LOG_DEFAULT_LEVEL=9
+#CONFIG_LOG_MAX_LEVEL=9
